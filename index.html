@@ -9,20 +9,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
-  <title>WowFolio - A Simple & Clean Portfolio Template For Developers</title>
-  <meta name="description" content="Wowfolio - A Simple & Clean Portfolio Template For Developers" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/devicon.min.css" />
+  <title>Gabriel Oliveira's Portifolio</title>
+  <meta name="description" content="Gabriel Oliveira's Engineering Portifolio" />
 </head>
+
+
 
 <body>
   <header class="main-header">
     <div class="main-header__logo-container">
       <div class="main-header__logo-img-cont">
-        <img
-          src="https://d33wubrfki0l68.cloudfront.net/32c48e23e828c42a99a37db81e2a91d7c8eed4de/d134a/assets/png/ram-maheshwari.png"
-          alt="logo Image" class="main-header__logo-img" />
+        <img src="./assets/me_crop.png" alt="logo Image" class="main-header__logo-img" />
       </div>
-      <h4 class="main-header__logo-text">John Anderson</h4>
+      <h4 class="main-header__logo-text">Gabriel de Souza Oliveira</h4>
     </div>
     <nav class="main-header__navigation">
       <ul class="main-header__navigation-links">
@@ -32,6 +32,14 @@
           <a href="./index.html#projects"> Projects </a>
         </li>
         <li class="main-header__navigation-link"><a href="./index.html#contact" href=""> Contact </a></li>
+        <li class="main-header__navigation-link">
+          <select id="lang-switcher" style="margin-left: 10px;">
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="pt">PT</option>
+          </select>
+
+        </li>
       </ul>
     </nav>
     <div class="main-header__sm-scr-nav-btn">
@@ -73,9 +81,10 @@
     <div class="home-hero__content">
       <div class="home-hero__info">
         <h1 class="heading-primary home-hero__heading-primary">
-          <span class="heading-primary__sm"> Hello 👋</span>
+          <span class="heading-primary__sm"> Hi, I'm Gabriel Oliveira! 👋</span>
           <span class="heading-primary__main">
-            I'm John Anderson! A Web Developer Building Awesome Webapps And Websites That Powers The Internet
+            I’m an engajado recently graduated engineer interested in working in the intersection of space and robotics.
+            Does it sound like your company ? Check my projects below.
           </span>
         </h1>
         <button class="btn btn-theme home-hero__btn-theme">Projects</button>
@@ -86,37 +95,25 @@
   <section id="about" class="about main-section">
     <div class="main-container">
       <h2 class="heading-secondary projects__heading-secondary">
-        <span class="heading-secondary__sm"> About 🦄</span>
+        <span class="heading-secondary__sm"> About 🏭</span>
         <span class="heading-secondary__main">
-          Here you will find more information about me, what I do, and list of my current skills in programming
+          Here you will find more information about me, CV, and list of past projects
       </h2>
       <div class="main-section__content">
         <div class="about__info">
           <div class="about__main-info">
             <h3 class="heading-quaternary about__heading-quaternary">
-              My Story
+              Looking for an Apprenticeship (Oct 2026)!
             </h3>
             <p class="text-primary about__text-primary">
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Error, aliquid! Itaque corrupti magnam fugiat mollitia labore
-                magni saepe veritatis voluptatum alias fugit. Explicabo
-                ducimus sequi aut corporis odio repellendus? Lorem ipsum dolor
-                sit amet
-              </span>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Error, aliquid! Itaque corrupti magnam fugiat mollitia labore
-                magni saepe veritatis voluptatum alias fugit. Explicabo
-                ducimus sequi aut corporis odio repellendus? Lorem ipsum dolor
-                sit amet
-              </span>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Error, aliquid! Itaque corrupti magnam fugiat mollitia labore
-                magni saepe veritatis voluptatum alias fugit. Explicabo
-                ducimus sequi aut corporis odio repellendus? Lorem ipsum dolor
-                sit amet
+                undergraduate student in Aerospace Engineering at the University of Brasília 🇧🇷. I also recently (dec
+                2025) graduated in Microelectronics and Control from Polytech Montpellier 🇫🇷.
+                A motivated and autonomous recent graduate in Microelectronics and Automation (Bac+5),
+                seeking an APPRENTICESHIP in Test & AIT or Systems engineering to pursue
+                the Mastère Développement des Systèmes Spatiaux (Bac+6) at CSUM. Eager to apply and
+                further develop skills in environmental testing (Vibration, Thermal Vacuum, RF) and
+                cleanroom procedures acquired through the program.
               </span>
             </p>
             <button class="btn btn-theme about__btn-theme">Projects</button>
@@ -124,24 +121,17 @@
           <div class="about__skill-info">
             <h3 class="heading-quaternary about__heading-quaternary">
               My Skills
-            </h3>
-            <ul class="about__skills">
-              <li class="about__skill">html</li>
-              <li class="about__skill">css</li>
-              <li class="about__skill">javascript</li>
-              <li class="about__skill">react</li>
-              <li class="about__skill">node</li>
-              <li class="about__skill">git</li>
-              <li class="about__skill">vscode</li>
-              <li class="about__skill">linux</li>
-              <li class="about__skill">react</li>
-              <li class="about__skill">node</li>
-              <li class="about__skill">git</li>
-              <li class="about__skill">vscode</li>
-              <li class="about__skill">linux</li>
-              <li class="about__skill">javascript</li>
-              <li class="about__skill">react</li>
-            </ul>
+              <ul class="about__skills">
+                <li class="about__skill">soldering</li>
+                <li class="about__skill">3D printing</li>
+                <li class="about__skill">python</li>
+                <li class="about__skill">c/c++</li>
+                <li class="about__skill">matlab/simulink</li>
+                <li class="about__skill">git</li>
+                <li class="about__skill">linux</li>
+                <li class="about__skill">docker</li>
+                <li class="about__skill">ROS2</li>
+              </ul>
           </div>
         </div>
       </div>
@@ -150,29 +140,24 @@
   <section class="skills-showcase">
     <ul class="skills-showcase__list">
       <li class="skills-showcase__list-item">
-        <i class="devicon-html5-plain"></i>
+        <i class="devicon-git-plain"></i>
       </li>
       <li class="skills-showcase__list-item">
-        <i class="devicon-css3-plain"></i>
+        <i class="devicon-docker-plain"></i>
       </li>
       <li class="skills-showcase__list-item">
-        <i class="devicon-javascript-plain"></i>
+        <i class="devicon-ros-original"></i>
       </li>
       <li class="skills-showcase__list-item">
-        <i class="devicon-react-original"></i>
+        <i class="devicon-cplusplus-plain"></i>
       </li>
       <li class="skills-showcase__list-item">
-        <i class="devicon-sass-original"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-nodejs-plain"></i>
+
+        <i class="devicon-linux-plain"></i>
+
       </li>
       <li class="skills-showcase__list-item">
         <i class="devicon-git-plain"></i>
-      </li>
-
-      <li class="skills-showcase__list-item">
-        <i class="devicon-android-plain"></i>
       </li>
       <li class="skills-showcase__list-item">
         <i class="devicon-python-plain"></i>
@@ -197,10 +182,10 @@
             </div>
             <div class="projects__list-item-details">
               <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
+                <img src="./assets/project1/motor.jpg" alt="Project Image" class="projects__list-item-img" />
               </div>
               <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Project Name
+                Hybrid Rocket Engine Isolation and Test
               </h3>
               <!-- <hr class="projects__title-text-divider" /> -->
 
@@ -218,16 +203,21 @@
                   sit amet, consectetur adipisicing elit
                 </span>
               </p>
-              <button class="btn btn-theme projects__btn-theme">
-                Live Link
-              </button>
-              <button class="btn btn-inv projects__btn-inv">Code Link</button>
+              <a href="
+https://www.correiobraziliense.com.br/euestudante/ensino-superior/2022/08/5028850-equipe-da-unb-e-1-da-america-latina-a-lancar-foguete-hibrido-em-competicao.html"
+                target="_blank" class="btn btn-theme projects__btn-theme">
+                News
+              </a>
+              <a href="https://www.youtube.com/watch?v=Fofx6mJ0MP8" target="_blank"
+                class="btn btn-inv projects__btn-inv">
+                Fire test
+              </a>
             </div>
           </div>
           <div class="projects__list-item projects__list-item--inv">
             <div class="projects__list-item-details">
               <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
+                <img src="./assets/project2/arm_pfe.png" alt="Project Image" class="projects__list-item-img" />
               </div>
               <h3 class="heading-tertiary projects__list-item-heading-tertiary">
                 Project Name
@@ -267,7 +257,7 @@
             </div>
             <div class="projects__list-item-details">
               <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
+                <img src="./assets/project2/gripper_mod.png" alt="Project Image" class="projects__list-item-img" />
               </div>
               <h3 class="heading-tertiary projects__list-item-heading-tertiary">
                 Project Name
@@ -297,7 +287,7 @@
           <div class="projects__list-item projects__list-item--inv">
             <div class="projects__list-item-details">
               <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
+                <img src="./assets/me.png" alt="Project Image" class="projects__list-item-img" />
               </div>
               <h3 class="heading-tertiary projects__list-item-heading-tertiary">
                 Project Name
@@ -343,19 +333,21 @@
       </h2>
       <div class="main-section__content">
         <div class="contact__form-cont">
-          <form class="contact__form">
+          <form action="https://submit-form.com/b5bYfBBR5" method="POST" class="contact__form">
             <div class="contact__form-field">
               <label for="name" class="contact__form-field-label">Name</label>
-              <input placeholder="Enter Your Name" type="text" class="contact__form-field-input" />
+              <input placeholder="Enter Your Name" type="text" id="name" name="name" class="contact__form-field-input"
+                required />
             </div>
             <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Email</label>
-              <input placeholder="Enter Your Email" type="text" class="contact__form-field-input" />
+              <label for="email" class="contact__form-field-label">Email</label>
+              <input placeholder="Enter Your Email" type="email" id="email" name="email"
+                class="contact__form-field-input" required />
             </div>
             <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Message</label>
-              <textarea placeholder="Enter Your Message" name="message" id="" cols="30" rows="10"
-                class="contact__form-field-input"></textarea>
+              <label for="message" class="contact__form-field-label">Message</label>
+              <textarea placeholder="Enter Your Message" name="message" id="message" cols="30" rows="10"
+                class="contact__form-field-input" required></textarea>
             </div>
             <button type="submit" class="contact__form-submit">Submit</button>
           </form>
@@ -383,24 +375,15 @@
         </ul>
         <div class="main-footer__mid-line"></div>
         <div class="main-footer__socials">
-          <a href="#" class="main-footer__social-link">
+          <a href="https://github.com/gabrieldse" class="main-footer__social-link">
             <img
               src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png"
               alt="" class="main-footer__social-link-icon" />
           </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-instagram-48.png" alt="" class="main-footer__social-link-icon" />
-          </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-twitter-50.png" alt="" class="main-footer__social-link-icon" />
-          </a>
-          <a href="#" class="main-footer__social-link">
+          <a href="https://www.linkedin.com/in/gabrielsouzaoliveira/" class="main-footer__social-link">
             <img
               src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
               alt="" class="main-footer__social-link-icon" />
-          </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-pinterest-64.png" alt="" class="main-footer__social-link-icon" />
           </a>
         </div>
       </div>

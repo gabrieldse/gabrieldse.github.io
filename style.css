@@ -6,7 +6,7 @@
 }
 
 :root {
-  --themeColor: 29, 161, 242;
+  --themeColor: 36, 107, 87;
   /* Theme Color in (R,G,B) format */
 }
 
@@ -831,7 +831,7 @@ a {
 }
 
 .contact__form-visual {
-  background-image: url('https://i.postimg.cc/mrHQw69n/contact-form-bg.jpg');
+  background-image: url('./assets/contact-form-bg-.jpg');
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -860,7 +860,7 @@ a {
 
 .main-footer__upper {
   background: #000;
-  padding: 10rem 0;
+  padding: 2rem 0;
 }
 
 .main-footer__links {
@@ -876,12 +876,12 @@ a {
   font-size: 1.6rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 500;
+  font-weight: 50200;
 }
 
 @media (max-width: 37.5em) {
   .main-footer__upper {
-    padding: 7rem 0;
+    padding: 2rem 0;
   }
 
   .main-footer__links {
@@ -890,7 +890,7 @@ a {
 
   .main-footer__link a {
     margin-bottom: 0.5rem;
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
     display: block;
   }
 }
@@ -898,7 +898,7 @@ a {
 .main-footer__mid-line {
   background: grey;
   height: 1px;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 .main-footer__socials {
@@ -907,7 +907,7 @@ a {
   justify-content: space-between;
   max-width: 25rem;
   margin: auto;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 .main-footer__social-link-icon {
@@ -915,7 +915,7 @@ a {
 }
 
 .main-footer__bottom {
-  padding: 5rem 2rem;
+  padding: 1rem 1rem;
   background: #222;
 }
 

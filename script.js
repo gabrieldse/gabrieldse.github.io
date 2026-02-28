@@ -77,8 +77,25 @@ smMenuCloseBtn.addEventListener('click', () => {
   smMenu.classList.remove('main-header__sm-menu--active')
 })
 
-
-
+// Translation functionality
+document.addEventListener('DOMContentLoaded', function () {
+  const langSwitcher = document.getElementById('lang-switcher');
+  if (langSwitcher) {
+    langSwitcher.addEventListener('change', function (e) {
+      const lang = e.target.value;
+      if (lang === 'pt') {
+        document.querySelector('.heading-primary__sm').textContent = "Olá 👋";
+        document.querySelector('.heading-primary__main').textContent = "Eu sou Gabriel de Souza Oliveira! Desenvolvedor Web construindo aplicações e sites incríveis.";
+      } else if (lang === 'en') {
+        document.querySelector('.heading-primary__sm').textContent = "Hello 👋";
+        document.querySelector('.heading-primary__main').textContent = "I'm Gabriel de Souza Oliveira! A Web Developer Building Awesome Webapps And Websites That Powers The Internet";
+      } else if (lang === 'fr') {
+        document.querySelector('.heading-primary__sm').textContent = "Bonjour 👋";
+        document.querySelector('.heading-primary__main').textContent = "Je suis Gabriel de Souza Oliveira ! Développeur Web créant des applications et sites web impressionnants.";
+      }
+    });
+  }
+});
 
 
 // ---
