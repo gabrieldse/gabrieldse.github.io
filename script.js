@@ -83,16 +83,24 @@ document.addEventListener('DOMContentLoaded', function () {
   if (langSwitcher) {
     langSwitcher.addEventListener('change', function (e) {
       const lang = e.target.value;
-      if (lang === 'pt') {
-        document.querySelector('.heading-primary__sm').textContent = "Olá 👋";
-        document.querySelector('.heading-primary__main').textContent = "Eu sou Gabriel de Souza Oliveira! Desenvolvedor Web construindo aplicações e sites incríveis.";
-      } else if (lang === 'en') {
-        document.querySelector('.heading-primary__sm').textContent = "Hello 👋";
-        document.querySelector('.heading-primary__main').textContent = "I'm Gabriel de Souza Oliveira! A Web Developer Building Awesome Webapps And Websites That Powers The Internet";
+      
+      // Hero section translations
+      if (lang === 'en') {
+        document.querySelector('.heading-primary__sm').textContent = "Hi, I'm Gabriel Oliveira! 👋";
+        document.querySelector('.heading-primary__main').textContent = "I am a Microelectronics and Control Engineer currently pursuing a degree in Aerospace Systems. I'm interested in the integration of hardware and autonomous robotics for space applications. Does it sound like your company? Check my projects below.";
       } else if (lang === 'fr') {
-        document.querySelector('.heading-primary__sm').textContent = "Bonjour 👋";
-        document.querySelector('.heading-primary__main').textContent = "Je suis Gabriel de Souza Oliveira ! Développeur Web créant des applications et sites web impressionnants.";
+        document.querySelector('.heading-primary__sm').textContent = "Bonjour, je m'appelle Gabriel Oliveira! 👋";
+        document.querySelector('.heading-primary__main').textContent = "Je suis un ingénieur en microélectronique et contrôle, actuellement poursuivant un diplôme en systèmes aérospatiaux. Je m'intéresse à l'intégration du matériel et à la robotique autonome pour les applications spatiales. Ça vous intéresse ? Consultez mes projets ci-dessous.";
       }
+      
+      // Translate other elements with data attributes
+      document.querySelectorAll('[data-en]').forEach(element => {
+        if (lang === 'fr' && element.getAttribute('data-fr')) {
+          element.textContent = element.getAttribute('data-fr');
+        } else if (lang === 'en') {
+          element.textContent = element.getAttribute('data-en');
+        }
+      });
     });
   }
 });
@@ -111,10 +119,10 @@ const hexToRgb = (hex) => {
   let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
   return result
     ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
-      }
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16),
+    }
     : null
 }
 
@@ -135,7 +143,7 @@ themeColorSelector.addEventListener('click', () => {
 const setDynamicColor = (color) => {
 
   const { r, g, b } = hexToRgb(`${color}`)
-  
+
   root.style.setProperty('--themeColor', `${r},${g},${b}`);
   //localStorage.setItem('color', color)
 }
@@ -156,3 +164,26 @@ const headerLogoConatiner = document.querySelector('.main-header__logo-container
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+// Carousel navigation - scroll to slide without page movement
+document.querySelectorAll('.carousel-nav-dot').forEach(dot => {
+  dot.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const slideId = this.getAttribute('data-slide');
+    const targetElement = document.getElementById(slideId);
+    
+    if (targetElement) {
+      const carousel = targetElement.closest('.carousel');
+      if (carousel) {
+        // Calculate scroll position: element's position within carousel
+        const elementIndex = Array.from(carousel.children).indexOf(targetElement);
+        const scrollPosition = elementIndex * carousel.offsetWidth;
+        carousel.scrollTo({left: scrollPosition, behavior: 'smooth'});
+      }
+    }
+    
+    return false;
+  });
+});
