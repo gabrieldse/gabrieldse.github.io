@@ -1,0 +1,48 @@
+baseURL = "https://gabrieldse.github.io/"
+languageCode = "en-us"
+enableEmoji = true
+theme = "maverick"
+
+title = "Gabriel Oliveira | Aerospace & Robotics Engineer"
+
+[pagination]
+    pagerSize = 10
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+[markup.tableOfContents]
+endLevel = 3
+ordered = false
+startLevel = 1
+
+[params]
+  logo = "images/me_crop.png"
+  description = "Gabriel Oliveira's Personal Website and Portfolio"
+  name = "Gabriel Oliveira"
+
+[params.footer]
+    text = """
+    Theme based on Maverick by Calvin Canh Tran ([@canhtran](https://github.com/canhtran))
+    """
+
+[params.news]
+    numNews = 5
+
+[permalinks]
+  pages = "/:slug"
+
+[menu]
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "#projects-section"
+    weight = -110
+  [[menu.main]]
+    identifier = "news"
+    name = "News"
+    url = "#news-section"
+    weight = -200
+
+[taxonomies]
+  tag = "tags"
