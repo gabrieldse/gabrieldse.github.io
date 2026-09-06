@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  {{ partial "head.html" . }}
+<body>
+  <div class="site">
+    <a class="skip-link" href="#main">Skip to main</a>
+    <main id="main">
+      <div class="content">
+        {{ partial "header.html" . }}
+        {{ .Content }}
+
+        <!-- News Section -->
+        {{ partial "news-list.html" . }}
+
+        <!-- Projects Section -->
+        {{ if gt (len ( where .Site.RegularPages "Section" "projects" )) 0 }}
+        <h2 id="projects-section">Projects</h2>
+        <section class="projects-section">
+          {{ range (where .Site.RegularPages "Section" "projects").ByDate.Reverse }}
+            {{ partial "project-item.html" . }}
+          {{ end }}
+        </section>
+        {{ end }}
+
+        <!-- Blog Posts Section -->
+        {{ if gt (len ( where .Site.RegularPages "Section" "posts" )) 0 }}
+        <h1>Latest Post</h1>
+        <section>
+          {{ range (first .Site.Params.items (where .Site.RegularPages "Section" "posts" ).ByDate.Reverse) }}
+            <p>
+              <time class="g time" datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>&nbsp;
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <p>
+          {{ end }}
+        </section>
+        {{ end }}
+      </div>
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
+</body>
+</html>
