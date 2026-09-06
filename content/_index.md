@@ -1,6 +1,6 @@
 ## Hi there! 👋
 
-<img class="avatar" src="images/me.png" alt="Gabriel Oliveira">
+<img class="avatar" src="images/me_crop.png" alt="Gabriel Oliveira">
 
 Hey, I am Gabriel!
 
@@ -32,7 +32,7 @@ I hold a dual background in **Aerospace Engineering** ([UnB 🇧🇷](https://in
     gabriel.oliveira.dse@gmail.com
 </a>
 <br>
-<a class="no-underline" href="https://drive.google.com/file/d/1tqXE-d2PF5yge1T1xNQxNQE2hWVIESrU/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+<a class="no-underline" href="https://drive.google.com/file/d/1_FYI1q3YPIEXFNxeZimM-K3gtNNYal3B/view?usp=sharing" target="_blank" rel="noopener noreferrer">
     <i class="fa-regular fa-file"></i>
     Resume / CV
 </a>

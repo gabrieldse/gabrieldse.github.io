@@ -332,6 +332,8 @@ a.no-underline {
 .avatar {
   height: 200px;
   width: 200px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 50%;
   position: relative;
   float: right;
@@ -345,6 +347,8 @@ a.no-underline {
     margin: 1rem auto;
     width: 150px;
     height: 150px;
+    object-fit: cover;
+    object-position: center;
   }
 }
 

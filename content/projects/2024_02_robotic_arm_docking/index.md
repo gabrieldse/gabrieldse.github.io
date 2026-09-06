@@ -18,5 +18,5 @@ links:
 draft: false
 ---
 <!--summary-->
-Developed a ROS2-based control system for a robotic arm using OpenCV and circular markers, implementing visual feedback and PID control loops. Also constructed and modified an open-source gripper.
+Developed a ROS2-based control system for a robotic arm using OpenCV and circular markers, implementing visual feedback and PID control loops. Also built and modified an open-source gripper.
 <!--more-->

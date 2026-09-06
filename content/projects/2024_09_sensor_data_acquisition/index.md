@@ -1,7 +1,7 @@
 ---
 id: sensor-data-acquisition
 title: 'Automotive Sensor Data Acquisition System'
-subtitle: "Multi-Sensor Telemetry & Embedded Linux Integration"
+subtitle: "Multi-Sensor Telemetry & Automatic Data Collection"
 date: 2024-09-01
 startDate: 2024-06-01
 endDate: 2024-09-01
