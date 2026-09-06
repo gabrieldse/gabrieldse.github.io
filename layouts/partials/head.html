@@ -1,0 +1,61 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Liste - {{ .Site.BaseURL }}">
+    <title>{{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/schema.html" . }}
+    {{ template "_internal/google_analytics.html" . }}
+    <meta property="og:image" content="{{ "images/me_crop.png" | absURL }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="icon" href="{{ "images/favicon.ico" | relURL }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/atom.xml" />
+    <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/feed.json" />
+    <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bricolage+Grotesque">
+
+    <!-- Font-Awesome -->
+    <link href="{{ "font-awesome/7.1.0/css/all.min.css" | relURL }}" rel="stylesheet">
+
+    {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
+    <style>{{ $styles.Content | safeCSS }}</style>
+
+    {{ if .IsHome -}}
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "{{ .Site.Title }}",
+        "url": "{{ .Site.BaseURL }}",
+        "description": "{{ .Site.Params.description }}",
+        "thumbnailUrl": "{{ .Site.Params.Logo | absURL }}",
+        "license": "{{ .Site.Params.Copyright }}"
+    }
+    </script>
+    {{ end }}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-menu');
+            const header = document.querySelector('header');
+        
+            if (burger) {
+                burger.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                    header.classList.toggle('menu-open');
+                });
+        
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!header.contains(e.target) && nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        header.classList.remove('menu-open');
+                    }
+                });
+            }
+        });
+    </script>
+</head>
