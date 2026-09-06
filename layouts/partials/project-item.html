@@ -1,0 +1,91 @@
+<div class="project-item">
+  {{ $slug := default (replace .File.TranslationBaseName "_" "-") .Params.id }}
+  {{ $id := printf "overlay-image-%s" $slug }}
+  {{ $img := or (.Resources.GetMatch "images/cover.png") (.Resources.GetMatch "images/cover.jpg") (.Resources.GetMatch "images/cover.jpeg") (.Resources.GetMatch "images/cover.webp") }}
+  {{ $video := or (.Resources.GetMatch "images/cover.mp4") (.Resources.GetMatch "images/cover.webm") }}
+  <div class="project-image"
+     {{ if $video }}
+     onmouseover="var el = document.getElementById('{{ $id }}'); if (el) el.style.opacity=0;"
+     onmouseout="var el = document.getElementById('{{ $id }}'); if (el) el.style.opacity=1;"
+     {{ end }}
+   >
+     {{ if $video }}
+       <video muted autoplay loop playsinline preload="metadata">
+         <source src="{{ $video.RelPermalink }}" type="video/mp4">
+         Your browser does not support the video tag.
+       </video>
+    {{ end }}
+
+    {{ if $img }}
+      {{ if eq $img.MediaType.SubType "svg" }}
+        <img id="{{ $id }}" src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
+      {{ else }}
+        {{ $thumb := $img.Resize "400x" }}
+        <img id="{{ $id }}" src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}">
+      {{ end }}
+    {{ else }}
+      <p>No cover image available.</p>
+    {{ end }}
+  </div>
+
+  <div class="project-info">
+    {{ if .Params.link }}
+    <a href="{{ .Params.link }}" class="project-title" target="_blank" rel="noopener noreferrer">{{ .Params.title }}</a>
+    {{ else }}
+    <span class="project-title">{{ .Params.title }}</span>
+    {{ end }}
+
+    {{ if .Params.subtitle }}
+    <div class="project-subtitle">{{ .Params.subtitle | markdownify }}</div>
+    {{ end }}
+
+    {{ $start := .Params.startDate }}
+    {{ $end := .Params.endDate }}
+    {{ $date := .Date }}
+    <span class="project-date">
+      {{ if $start }}
+      {{ $start | dateFormat "Jan 2006" }} –
+      {{ if $end }}
+      {{ $end | dateFormat "Jan 2006" }}
+      {{ else }}
+      Present
+      {{ end }}
+      {{ else if $date }}
+      {{ $date | dateFormat "Jan 2006" }}
+      {{ else }}
+      Unknown
+      {{ end }}
+    </span>
+
+    {{ if .Params.authors }}
+    <div class="project-authors">
+      {{ range $index, $author := .Params.authors }}
+      {{ if $index }}, {{ end }}
+      {{ if $author.link }}
+      <a href="{{ $author.link }}" target="_blank" rel="noopener noreferrer">{{ $author.name }}</a>
+      {{ else }}
+      {{ $author.name }}
+      {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if .Params.links }}
+    <div class="project-links">
+      {{ range $index, $link := .Params.links }}
+      {{ if $index }} | {{ end }}
+      {{ $file := $.Resources.GetMatch $link.url }}
+      {{ if $file }}
+      [<a href="{{ $file.RelPermalink }}" target="_blank" rel="noopener noreferrer">{{ $link.text }}</a>]
+      {{ else }}
+      [<a href="{{ $link.url }}" target="_blank" rel="noopener noreferrer">{{ $link.text }}</a>]
+      {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="project-body">
+      {{ .Summary | safeHTML }}
+    </div>
+  </div>
+</div>
