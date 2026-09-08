@@ -1,14 +1,20 @@
 ## Hi there! 👋
 
-<img class="avatar" src="images/me_crop.png" alt="Gabriel Oliveira">
+<img class="avatar" src="/images/me_crop.png" alt="Gabriel Oliveira">
 
-Hey, I am Gabriel!
+Hey, I am Gabriel! I am a recent engineering graduate in **Microelectronics and Control** with a specialization in **Robotics** (BAC+5). 
 
-I am a **Microelectronics and Control Engineer** currently pursuing a degree in **Aerospace Systems**. I am interested in the integration of hardware and autonomous robotics for space applications.
+I am interested in the integration of **hardware** and **software**, primarily for **autonomous systems** and space applications.
 
-I hold a dual background in **Aerospace Engineering** ([UnB 🇧🇷](https://international.unb.br/)) and **Microelectronics & Control** ([Polytech Montpellier 🇫🇷](https://www.polytech.umontpellier.fr/)).
+I hold a dual background in **Aerospace Engineering** ([UnB 🇧🇷](https://international.unb.br/)), where I studied for three and a half years, and **Microelectronics & Control** ([Polytech Montpellier 🇫🇷](https://www.polytech.umontpellier.fr/)) for the last two years, specializing in Robotics.
 
-🚀 I am currently **seeking opportunities in the aerospace industry**, focusing on embedded systems, R&D, and the bridge between hardware and software.
+Previously, I gained experience in aerial robotics and drones, focused on selecting and validating LiDAR sensors and deploying SLAM applications.
+
+Following that, I was responsible for designing an autonomous data acquisition testbench for gathering data from various perception sensors under varying weather conditions.
+
+On the hobby side, I enjoy playing volleyball, especially beach volleyball during the summer, playing the guitar, and learning new languages. 
+
+🚀 I am currently **seeking opportunities in the aerospace industry** in **Toulouse**, focusing on embedded systems, R&D, and the bridge between hardware and software.
 
 ### Technical Skills
 - **Robotics & Systems:** ROS2, Robotics, Embedded Programming, Control Systems, FEM
