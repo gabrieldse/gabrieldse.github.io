@@ -8,14 +8,12 @@ I am a **Microelectronics and Control Engineer** currently pursuing a degree in 
 
 I hold a dual background in **Aerospace Engineering** ([UnB 🇧🇷](https://international.unb.br/)) and **Microelectronics & Control** ([Polytech Montpellier 🇫🇷](https://www.polytech.umontpellier.fr/)).
 
-🚀 Currently, I am seeking an apprenticeship to support my one-year [Mastère in Space Systems Development (Bac+6)][CSUM-Program] at **CSUM (Centre Spatial Universitaire Montpellier)**. A specialized program that teaches skills in environmental testing (Vibration, Thermal Vacuum, RF) focused on nanosatellites and cleanroom procedures among other things.
+🚀 I am currently **seeking opportunities in the aerospace industry**, focusing on embedded systems, R&D, and the bridge between hardware and software.
 
 ### Technical Skills
 - **Robotics & Systems:** ROS2, Robotics, Embedded Programming, Control Systems, FEM
 - **Languages & Tools:** Python, C/C++, MATLAB/Simulink, Linux, Docker, Git, Rust
 - **Hardware & Prototyping:** Soldering, 3D Printing, Sensor Integration, Telemetry
-
-[CSUM-Program]: https://csum.umontpellier.fr/files/2023/03/Plaquette_MS-DSS_fr_2023.pdf
 
 <a class="no-underline" href="https://github.com/gabrieldse" target="_blank" rel="noopener noreferrer">
     <i class="fa-brands fa-github"></i>
